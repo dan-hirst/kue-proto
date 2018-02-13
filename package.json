@@ -1,0 +1,19 @@
+{
+  "name": "postal-service-queue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others \"node index.js\" \"node firstWorker.js\" \"node secondWorker.js\""
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "http": "^0.0.0",
+    "kue": "^0.11.6",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
